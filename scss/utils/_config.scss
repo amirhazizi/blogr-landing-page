@@ -1,0 +1,30 @@
+// import variables
+@import "./variables";
+// fonts
+// import fonts
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+// reset style
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  display: inline-block;
+}
+// global style
+html {
+  // font-family: 'Overpass', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+}

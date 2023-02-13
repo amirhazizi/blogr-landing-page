@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
+}
+
+html {
+  font-size: 16px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: white;
+  color: white;
+  padding: 0.2rem 0.35rem;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.attribution a {
+  font-weight: bold;
+  color: white;
+}
