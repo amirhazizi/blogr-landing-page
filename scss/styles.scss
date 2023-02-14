@@ -103,11 +103,12 @@
     }
   }
 }
-.section {
+#section {
   padding: 5rem 0;
   text-align: center;
 }
-.editor {
+.editor-section {
+  @extend #section;
   font-family: "Overpass", sans-serif;
   margin-bottom: 14rem;
   h1 {
@@ -139,22 +140,23 @@
     }
   }
 }
-.phone {
+.phone-section {
   position: relative;
   background: linear-gradient(hsl(237, 18%, 21%), hsl(237, 23%, 32%)),
     url("../images/bg-pattern-circles.svg") top 650% center/150% no-repeat;
   background-blend-mode: lighten;
   border-radius: 0 $radius-4 0 $radius-4;
-  img {
+  .phone-img {
     position: absolute;
     width: 100%;
     top: -5%;
-    transform: translate(0, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 450px;
     margin: 0 auto;
     z-index: 1;
   }
-  article {
+  .phone-article {
     text-align: center;
     padding: 6rem 2rem;
     padding-top: 12rem;
@@ -171,6 +173,40 @@
     }
   }
 }
+.laptop-section {
+  @extend #section;
+  padding: 4rem 0;
+  font-family: "Overpass", sans-serif;
+  margin-bottom: 14rem;
+  h1 {
+    margin-bottom: 2rem;
+  }
+  .laptop-container {
+    .laptop-img {
+      margin-bottom: 2rem;
+      img {
+        width: 100%;
+      }
+    }
+    .laptop-articles {
+      padding: 0 2rem;
+      color: $cl-Verydarkblue;
+      .article {
+        margin-bottom: 2rem;
+        h2 {
+          margin-bottom: 1rem;
+          font-size: 1.7rem;
+          line-height: 1.3;
+        }
+        p {
+          line-height: 1.7;
+          // font-family: "Ubuntu", sans-serif;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
 @media (min-width: 768px) {
   .editor-container {
     display: grid;
@@ -183,14 +219,21 @@
       text-align: left;
     }
   }
+  .laptop-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    .laptop-articles {
+      text-align: left;
+    }
+  }
   .phone {
-    article {
+    .phone-article {
       display: grid;
       grid-template-columns: 1fr 1fr;
       text-align: left;
       align-items: center;
       padding: 5rem 1rem;
-      // padding-left: 35rem;
     }
   }
 }

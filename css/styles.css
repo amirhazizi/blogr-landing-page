@@ -174,70 +174,102 @@ footer {
   margin-top: 1.5rem;
 }
 
-.section {
+#section, .laptop-section, .editor-section {
   padding: 5rem 0;
   text-align: center;
 }
 
-.editor {
+.editor-section {
   font-family: "Overpass", sans-serif;
   margin-bottom: 14rem;
 }
-.editor h1 {
+.editor-section h1 {
   margin-bottom: 2rem;
 }
-.editor .editor-container .editor-img {
+.editor-section .editor-container .editor-img {
   margin-bottom: 2rem;
 }
-.editor .editor-container .editor-img img {
+.editor-section .editor-container .editor-img img {
   width: 100%;
 }
-.editor .editor-container .editor-articles {
+.editor-section .editor-container .editor-articles {
   padding: 0 2rem;
   color: hsl(208deg, 49%, 24%);
 }
-.editor .editor-container .editor-articles .article {
+.editor-section .editor-container .editor-articles .article {
   margin-bottom: 2rem;
 }
-.editor .editor-container .editor-articles .article h2 {
+.editor-section .editor-container .editor-articles .article h2 {
   margin-bottom: 1rem;
   font-size: 1.7rem;
   line-height: 1.3;
 }
-.editor .editor-container .editor-articles .article p {
+.editor-section .editor-container .editor-articles .article p {
   line-height: 1.7;
   font-weight: 300;
 }
 
-.phone {
+.phone-section {
   position: relative;
   background: linear-gradient(hsl(237deg, 18%, 21%), hsl(237deg, 23%, 32%)), url("../images/bg-pattern-circles.svg") top 650% center/150% no-repeat;
   background-blend-mode: lighten;
   border-radius: 0 75px 0 75px;
 }
-.phone img {
+.phone-section .phone-img {
   position: absolute;
   width: 100%;
   top: -5%;
-  transform: translate(0, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 450px;
   margin: 0 auto;
   z-index: 1;
 }
-.phone article {
+.phone-section .phone-article {
   text-align: center;
   padding: 6rem 2rem;
   padding-top: 12rem;
   color: hsl(0deg, 0%, 100%);
   font-family: "Overpass", sans-serif;
 }
-.phone article h1 {
+.phone-section .phone-article h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-.phone article p {
+.phone-section .phone-article p {
   line-height: 1.5;
   color: hsl(240deg, 2%, 79%);
+}
+
+.laptop-section {
+  padding: 4rem 0;
+  font-family: "Overpass", sans-serif;
+  margin-bottom: 14rem;
+}
+.laptop-section h1 {
+  margin-bottom: 2rem;
+}
+.laptop-section .laptop-container .laptop-img {
+  margin-bottom: 2rem;
+}
+.laptop-section .laptop-container .laptop-img img {
+  width: 100%;
+}
+.laptop-section .laptop-container .laptop-articles {
+  padding: 0 2rem;
+  color: hsl(208deg, 49%, 24%);
+}
+.laptop-section .laptop-container .laptop-articles .article {
+  margin-bottom: 2rem;
+}
+.laptop-section .laptop-container .laptop-articles .article h2 {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  line-height: 1.3;
+}
+.laptop-section .laptop-container .laptop-articles .article p {
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -252,7 +284,15 @@ footer {
   .editor-container .editor-articles {
     text-align: left;
   }
-  .phone article {
+  .laptop-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .laptop-container .laptop-articles {
+    text-align: left;
+  }
+  .phone .phone-article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: left;
