@@ -125,16 +125,15 @@ html {
 .header .nav-fixed-menu .menu-container .menu-links-container div img {
   margin-top: 0.2rem;
 }
-.header .nav-fixed-menu .menu-container .menu-links-container ul {
-  display: none;
+.header .nav-fixed-menu .menu-container .small-nav-links {
   padding: 1rem 0;
-  display: grid;
+  display: none;
   gap: 0.8rem;
   opacity: 0.9;
   background: #e2e2e4;
   border-radius: 10px;
 }
-.header .nav-fixed-menu .menu-container .menu-links-container ul a {
+.header .nav-fixed-menu .menu-container .small-nav-links a {
   color: hsl(240deg, 10%, 16%);
 }
 .header .nav-fixed-menu .menu-sign {
@@ -318,6 +317,9 @@ html {
     gap: 0 1rem;
   }
   .header .nav-menu {
+    display: none;
+  }
+  .header .nav-close {
     display: none;
   }
   .header .nav .big-screen-nav-links {
@@ -520,4 +522,16 @@ html {
   .footer-container .footer-logo {
     margin: 0 auto;
   }
+}
+.nav .active {
+  visibility: visible;
+}
+.nav .unshow {
+  display: none;
+}
+.nav .menu-container .menu-links-container .rotate-arrow {
+  transform: rotate(180deg);
+}
+.nav .menu-container .menu-links-container .active-nav {
+  display: grid;
 }
