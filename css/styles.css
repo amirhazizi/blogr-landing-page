@@ -26,7 +26,7 @@ html {
   font-size: 16px;
 }
 
-#btn, .nav-signup-btn, .header-learnmore-btn, .header-start-btn {
+#btn, .big-screen-nav-signup-btn, .nav-signup-btn, .header-learnmore-btn, .header-start-btn {
   padding: 0.65rem 0.95rem;
   border-radius: 25px;
   border: 1px solid white;
@@ -53,6 +53,13 @@ html {
   padding: 0.8rem 1.8rem;
 }
 
+.big-screen-nav-signup-btn {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(356deg, 100%, 66%);
+  font-weight: 900;
+  padding: 0.7rem 1.8rem;
+}
+
 .header {
   background: linear-gradient(hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%)), url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
   background-blend-mode: saturation;
@@ -68,6 +75,12 @@ html {
 }
 .header .nav-logo {
   height: 2rem;
+}
+.header .nav .big-screen-nav-links {
+  display: none;
+}
+.header .nav .big-screen-menu-sign {
+  display: none;
 }
 .header .nav-fixed-menu {
   position: absolute;
@@ -113,13 +126,13 @@ html {
   margin-top: 0.2rem;
 }
 .header .nav-fixed-menu .menu-container .menu-links-container ul {
+  display: none;
   padding: 1rem 0;
   display: grid;
   gap: 0.8rem;
   opacity: 0.9;
   background: #e2e2e4;
   border-radius: 10px;
-  display: none;
 }
 .header .nav-fixed-menu .menu-container .menu-links-container ul a {
   color: hsl(240deg, 10%, 16%);
@@ -300,10 +313,55 @@ html {
     background: linear-gradient(90deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%)), url("../images/bg-pattern-intro-mobile.svg") top 50% left 30%/250% no-repeat;
   }
   .header .nav {
-    padding: 4rem;
+    padding: 2rem 4rem;
+    justify-content: start;
+    gap: 0 1rem;
   }
   .header .nav-menu {
     display: none;
+  }
+  .header .nav .big-screen-nav-links {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+  }
+  .header .nav .big-screen-nav-links .big-screen-link div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+  }
+  .header .nav .big-screen-nav-links .big-screen-link div button {
+    background: transparent;
+    border: none;
+    color: hsl(0deg, 0%, 100%);
+  }
+  .header .nav .big-screen-nav-links .big-screen-link ul {
+    visibility: hidden;
+    position: absolute;
+    background: hsl(0deg, 0%, 100%);
+    padding: 1.2rem 1rem;
+    width: 8rem;
+    border-radius: 10px;
+    transform: translate(-25%, 10%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.364);
+  }
+  .header .nav .big-screen-nav-links .big-screen-link ul a {
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+  }
+  .header .nav .big-screen-menu-sign {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    font-family: "Overpass", sans-serif;
+    gap: 0 1rem;
+  }
+  .header .nav .big-screen-menu-sign a {
+    color: hsl(0deg, 0%, 100%);
   }
   .header-content h1 {
     font-size: 2.7rem;
@@ -381,8 +439,8 @@ html {
   }
   .laptop-container .laptop-img .desktop {
     display: block;
-    height: 25rem;
-    margin-left: -9rem;
+    height: 30rem;
+    margin-left: -10.5rem;
   }
   .laptop-container .laptop-articles {
     text-align: left;

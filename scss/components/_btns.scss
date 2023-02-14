@@ -3,7 +3,7 @@
   border-radius: $radius-3;
   border: 1px solid white;
   font-weight: bold;
-  // font-family: "Overpass", sans-serif;
+
   font-family: "Ubuntu", sans-serif;
   margin: 0 0.3rem;
 }
@@ -24,4 +24,11 @@
   background: $gr-backgroundGradientnav;
   color: white;
   padding: 0.8rem 1.8rem;
+}
+.big-screen-nav-signup-btn {
+  @extend #btn;
+  background: $cl-White;
+  color: $cl-Lightred;
+  font-weight: 900;
+  padding: 0.7rem 1.8rem;
 }

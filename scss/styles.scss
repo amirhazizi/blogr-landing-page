@@ -19,6 +19,12 @@
     &-logo {
       height: 2rem;
     }
+    .big-screen-nav-links {
+      display: none;
+    }
+    .big-screen-menu-sign {
+      display: none;
+    }
     &-fixed-menu {
       position: absolute;
       background: $cl-White;
@@ -60,6 +66,7 @@
             }
           }
           ul {
+            display: none;
             padding: 1rem 0;
             display: grid;
             gap: 0.8rem;
@@ -69,7 +76,6 @@
             a {
               color: $cl-Verydarkblackblue;
             }
-            display: none;
           }
         }
       }
@@ -259,9 +265,56 @@
       url("../images/bg-pattern-intro-mobile.svg") top 50% left 30%/250%
         no-repeat;
     .nav {
-      padding: 4rem;
+      padding: 2rem 4rem;
+      justify-content: start;
+      gap: 0 1rem;
       &-menu {
         display: none;
+      }
+      .big-screen-nav-links {
+        display: flex;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        border-radius: $radius-1;
+        font-family: "Overpass", sans-serif;
+        font-weight: 700;
+        .big-screen-link {
+          div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0 0.5rem;
+            button {
+              background: transparent;
+              border: none;
+              color: $cl-White;
+            }
+          }
+          ul {
+            visibility: hidden;
+            position: absolute;
+            background: $cl-White;
+            padding: 1.2rem 1rem;
+            width: 8rem;
+            border-radius: $radius-2;
+            transform: translate(-25%, 10%);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.364);
+            a {
+              font-size: 0.8rem;
+              margin: 0.3rem 0;
+            }
+          }
+        }
+      }
+      .big-screen-menu-sign {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        font-family: "Overpass", sans-serif;
+        gap: 0 1rem;
+        a {
+          color: $cl-White;
+        }
       }
     }
 
@@ -344,8 +397,8 @@
       }
       .desktop {
         display: block;
-        height: 25rem;
-        margin-left: -9rem;
+        height: 30rem;
+        margin-left: -10.5rem;
       }
     }
     .laptop-articles {
