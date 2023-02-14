@@ -1,14 +1,21 @@
-main {
-  .btn {
-    border: none;
-    font-family: inherit;
-    color: white;
-    background: $cl-Verydarkcyan;
-    font-size: 1rem;
-    border-radius: $radius-1;
-    transition: $transition;
-    &:hover {
-      background: lighten($cl-Verydarkcyan, 15);
-    }
-  }
+#btn {
+  padding: 0.65rem 0.95rem;
+  border-radius: $radius-3;
+  border: 1px solid white;
+  font-weight: bold;
+  // font-family: "Overpass", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0 0.3rem;
+}
+.header-start-btn {
+  @extend #btn;
+  background: $cl-White;
+  color: $cl-Lightred;
+}
+.header-learnmore-btn {
+  @extend #btn;
+  background: transparent;
+  color: $cl-White;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
 }

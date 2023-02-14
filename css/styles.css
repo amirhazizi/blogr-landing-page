@@ -31,14 +31,72 @@ footer {
   left: 50%;
   transform: translate(-50%, 0);
   background: white;
-  color: white;
+  color: hsl(240deg, 10%, 16%);
   padding: 0.2rem 0.35rem;
   font-size: 11px;
   text-align: center;
   border-radius: 10px 10px 0 0;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .attribution a {
   font-weight: bold;
-  color: white;
+  color: hsl(356deg, 100%, 66%);
+}
+
+#btn, .header-learnmore-btn, .header-start-btn {
+  padding: 0.65rem 0.95rem;
+  border-radius: 25px;
+  border: 1px solid white;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0 0.3rem;
+}
+
+.header-start-btn {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(356deg, 100%, 66%);
+}
+
+.header-learnmore-btn {
+  background: transparent;
+  color: hsl(0deg, 0%, 100%);
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
+.header {
+  background: linear-gradient(hsla(13deg, 100%, 72%, 0.92), hsla(353deg, 100%, 62%, 0.92)), url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
+  opacity: 0.88;
+  background-color: rgb(255, 0, 0);
+  height: 110vh;
+  border-radius: 0 0 0 75px;
+}
+.header .nav {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav-logo {
+  height: 2rem;
+}
+.header-content {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  padding: 0 2.25rem;
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.header-content h1 {
+  font-weight: 600;
+}
+.header-content p {
+  color: hsl(240deg, 2%, 79%);
+  font-size: 1.1rem;
+}
+.header-content .header-buttons {
+  margin-top: 1.5rem;
 }

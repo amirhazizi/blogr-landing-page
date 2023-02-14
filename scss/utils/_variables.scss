@@ -15,17 +15,15 @@ $gr-backgroundGradientnav: linear-gradient(
   hsl(13, 100%, 72%),
   hsl(353, 100%, 62%)
 );
-// $cl-Very light red: hsl(13, 100%, 72%)
-// $cl-Light red: hsl(353, 100%, 62%)
 // Background gradient - body:
 $gr-backgroundGradientbody: linear-gradient(
   hsl(237, 17%, 21%),
   hsl(237, 23%, 32%)
 );
-// $cl-Ver darkgrayblue: hsl(237, 17%, 21%)
-// $cl-Verydarkdesaturatedblue: hsl(237, 23%, 32%)
+
 // other variables
 $radius-1: 5px;
 $radius-2: 10px;
 $radius-3: 25px;
+$radius-4: 75px;
 $transition: all 250ms linear;

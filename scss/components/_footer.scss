@@ -5,13 +5,14 @@ footer {
   left: 50%;
   transform: translate(-50%, 0);
   background: white;
-  color: white;
+  color: $cl-Verydarkblackblue;
   padding: 0.2rem 0.35rem;
   font-size: 11px;
   text-align: center;
   border-radius: $radius-2 $radius-2 0 0;
+  font-family: "Ubuntu", sans-serif;
 }
 .attribution a {
   font-weight: bold;
-  color: white;
+  color: $cl-Lightred;
 }

@@ -2,3 +2,44 @@
 @import "./utils/config";
 // footer
 @import "./components/footer";
+// btns
+@import "./components/btns";
+.header {
+  background: linear-gradient(
+      hsla(13, 100%, 72%, 0.92),
+      hsla(353, 100%, 62%, 0.92)
+    ),
+    url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
+  opacity: 0.88;
+  background-color: rgb(255, 0, 0);
+  height: 110vh;
+  border-radius: 0 0 0 $radius-4;
+  .nav {
+    padding: 4rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+      height: 2rem;
+    }
+  }
+  &-content {
+    color: $cl-White;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+    padding: 0 2.25rem;
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    h1 {
+      font-weight: 600;
+    }
+    p {
+      color: $cl-Grayishblue;
+      font-size: 1.1rem;
+    }
+    .header-buttons {
+      margin-top: 1.5rem;
+    }
+  }
+}
