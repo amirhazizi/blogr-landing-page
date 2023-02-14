@@ -19,3 +19,11 @@
   padding-left: 1.3rem;
   padding-right: 1.3rem;
 }
+.nav-signup-btn {
+  @extend #btn;
+  background: $gr-backgroundGradientnav;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  // font-family: 900;
+  // padding-right: 1.8rem;
+}
