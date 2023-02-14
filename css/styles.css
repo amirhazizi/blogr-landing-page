@@ -15,9 +15,6 @@ a,
 button {
   text-decoration: none;
   cursor: pointer;
-}
-
-button {
   display: inline-block;
 }
 
@@ -27,25 +24,6 @@ ul {
 
 html {
   font-size: 16px;
-}
-
-footer {
-  position: fixed;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background: white;
-  color: hsl(240deg, 10%, 16%);
-  padding: 0.2rem 0.35rem;
-  font-size: 11px;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
-  font-family: "Ubuntu", sans-serif;
-}
-
-.attribution a {
-  font-weight: bold;
-  color: hsl(356deg, 100%, 66%);
 }
 
 #btn, .nav-signup-btn, .header-learnmore-btn, .header-start-btn {
@@ -272,6 +250,43 @@ footer {
   font-weight: 300;
 }
 
+.footer {
+  background: hsl(240deg, 10%, 16%);
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 0 75px 0 0;
+}
+.footer-container {
+  display: grid;
+  gap: 2rem 0;
+}
+.footer-container .footer-logo {
+  margin: 0 auto;
+  height: 2rem;
+}
+.footer-container-links p {
+  margin-bottom: 2rem;
+}
+.footer-container-links ul a {
+  margin-bottom: 0.6rem;
+  color: hsl(240deg, 2%, 79%);
+}
+.footer .attribution {
+  color: hsl(240deg, 10%, 16%);
+  margin-top: 1rem;
+  text-align: center;
+  color: hsl(207deg, 13%, 34%);
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+.footer .attribution a {
+  color: hsl(0deg, 0%, 100%);
+  padding: 0 0.2rem;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .editor-container {
     display: grid;
@@ -292,11 +307,20 @@ footer {
   .laptop-container .laptop-articles {
     text-align: left;
   }
-  .phone .phone-article {
+  .phone-section .phone-article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: left;
     align-items: center;
     padding: 5rem 1rem;
+  }
+  .footer {
+    padding: 4rem 0;
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+  .footer-container {
+    align-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
