@@ -5,13 +5,9 @@
 // btns
 @import "./components/btns";
 .header {
-  background: linear-gradient(
-      hsla(13, 100%, 72%, 0.92),
-      hsla(353, 100%, 62%, 0.92)
-    ),
+  background: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%)),
     url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
-  opacity: 0.88;
-  background-color: rgb(255, 0, 0);
+  background-blend-mode: lighten;
   height: 35rem;
   border-radius: 0 0 0 $radius-4;
   .nav {
@@ -113,7 +109,7 @@
 }
 .editor {
   font-family: "Overpass", sans-serif;
-
+  margin-bottom: 14rem;
   h1 {
     margin-bottom: 2rem;
   }
@@ -143,6 +139,38 @@
     }
   }
 }
+.phone {
+  position: relative;
+  background: linear-gradient(hsl(237, 18%, 21%), hsl(237, 23%, 32%)),
+    url("../images/bg-pattern-circles.svg") top 650% center/150% no-repeat;
+  background-blend-mode: lighten;
+  border-radius: 0 $radius-4 0 $radius-4;
+  img {
+    position: absolute;
+    width: 100%;
+    top: -5%;
+    transform: translate(0, -50%);
+    max-width: 450px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  article {
+    text-align: center;
+    padding: 6rem 2rem;
+    padding-top: 12rem;
+    color: $cl-White;
+    font-family: "Overpass", sans-serif;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.5;
+      color: $cl-Grayishblue;
+    }
+  }
+}
 @media (min-width: 768px) {
   .editor-container {
     display: grid;
@@ -153,6 +181,16 @@
     }
     .editor-articles {
       text-align: left;
+    }
+  }
+  .phone {
+    article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+      align-items: center;
+      padding: 5rem 1rem;
+      // padding-left: 35rem;
     }
   }
 }
