@@ -55,7 +55,7 @@ html {
 
 .header {
   background: linear-gradient(hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%)), url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
-  background-blend-mode: lighten;
+  background-blend-mode: saturation;
   height: 35rem;
   border-radius: 0 0 0 75px;
 }
@@ -161,14 +161,20 @@ html {
   font-family: "Overpass", sans-serif;
   margin-bottom: 14rem;
 }
-.editor-section h1 {
+.editor-section .editor-header {
   margin-bottom: 2rem;
+}
+.editor-section .editor-container {
+  overflow-x: hidden;
 }
 .editor-section .editor-container .editor-img {
   margin-bottom: 2rem;
 }
-.editor-section .editor-container .editor-img img {
+.editor-section .editor-container .editor-img .editor-img-mobile {
   width: 100%;
+}
+.editor-section .editor-container .editor-img-desktop {
+  display: none;
 }
 .editor-section .editor-container .editor-articles {
   padding: 0 2rem;
@@ -189,7 +195,7 @@ html {
 
 .phone-section {
   position: relative;
-  background: linear-gradient(hsl(237deg, 18%, 21%), hsl(237deg, 23%, 32%)), url("../images/bg-pattern-circles.svg") top 650% center/150% no-repeat;
+  background: linear-gradient(hsl(237deg, 18%, 21%), hsl(237deg, 23%, 32%)), url("../images/bg-pattern-circles.svg") top -120% center/110% no-repeat;
   background-blend-mode: lighten;
   border-radius: 0 75px 0 75px;
 }
@@ -222,7 +228,6 @@ html {
 .laptop-section {
   padding: 4rem 0;
   font-family: "Overpass", sans-serif;
-  margin-bottom: 14rem;
 }
 .laptop-section h1 {
   margin-bottom: 2rem;
@@ -230,20 +235,23 @@ html {
 .laptop-section .laptop-container .laptop-img {
   margin-bottom: 2rem;
 }
-.laptop-section .laptop-container .laptop-img img {
+.laptop-section .laptop-container .laptop-img .mobile {
   width: 100%;
+}
+.laptop-section .laptop-container .desktop {
+  display: none;
 }
 .laptop-section .laptop-container .laptop-articles {
   padding: 0 2rem;
   color: hsl(208deg, 49%, 24%);
 }
-.laptop-section .laptop-container .laptop-articles .article {
-  margin-bottom: 2rem;
-}
-.laptop-section .laptop-container .laptop-articles .article h2 {
+.laptop-section .laptop-container .laptop-articles .article-header {
   margin-bottom: 1rem;
   font-size: 1.7rem;
   line-height: 1.3;
+}
+.laptop-section .laptop-container .laptop-articles .article {
+  margin-bottom: 2rem;
 }
 .laptop-section .laptop-container .laptop-articles .article p {
   line-height: 1.7;
@@ -255,7 +263,7 @@ html {
   font-family: "Ubuntu", sans-serif;
   color: white;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 0rem;
   border-radius: 0 75px 0 0;
 }
 .footer-container {
@@ -275,7 +283,7 @@ html {
 }
 .footer .attribution {
   color: hsl(240deg, 10%, 16%);
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
   color: hsl(207deg, 13%, 34%);
   font-size: 0.6rem;
@@ -288,39 +296,170 @@ html {
 }
 
 @media (min-width: 768px) {
-  .editor-container {
+  .header {
+    background: linear-gradient(90deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%)), url("../images/bg-pattern-intro-mobile.svg") top 50% left 30%/250% no-repeat;
+  }
+  .header .nav {
+    padding: 4rem;
+  }
+  .header .nav-menu {
+    display: none;
+  }
+  .header-content h1 {
+    font-size: 2.7rem;
+  }
+  .editor-section {
+    margin-bottom: 0;
+  }
+  .editor-section .editor-header {
+    margin-bottom: -4rem;
+  }
+  .editor-section .editor-container {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
   }
-  .editor-container .editor-img {
+  .editor-section .editor-container .editor-img {
+    justify-self: end;
     order: 1;
   }
-  .editor-container .editor-articles {
-    text-align: left;
+  .editor-section .editor-container .editor-img .editor-img-mobile {
+    display: none;
   }
-  .laptop-container {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
+  .editor-section .editor-container .editor-img .editor-img-desktop {
+    display: block;
+    height: 33rem;
+    margin-right: -12rem;
   }
-  .laptop-container .laptop-articles {
+  .editor-section .editor-container .editor-articles {
     text-align: left;
+    align-self: center;
+    padding-left: 2rem;
+    padding-top: 4rem;
+  }
+  .editor-section .editor-container .editor-articles .article h2 {
+    font-size: 1.1rem;
+  }
+  .editor-section .editor-container .editor-articles .article p {
+    font-size: 0.7rem;
+  }
+  .phone-section {
+    background-size: 90%;
+    background-position: bottom 15% left -200%;
+  }
+  .phone-section .phone-img {
+    left: 0;
+    top: 0;
+    transform: translate(0%, -5%);
+    width: 50%;
   }
   .phone-section .phone-article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: left;
     align-items: center;
-    padding: 5rem 1rem;
+    padding: 6rem 5rem;
+  }
+  .phone-section .phone-article h1 {
+    font-size: 1.8rem;
+  }
+  .phone-section .phone-article p {
+    font-size: 0.9rem;
+  }
+  .laptop-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .laptop-container .laptop-img {
+    margin-bottom: 2rem;
+    justify-self: flex-start;
+  }
+  .laptop-container .laptop-img .mobile {
+    display: none;
+  }
+  .laptop-container .laptop-img .desktop {
+    display: block;
+    height: 25rem;
+    margin-left: -9rem;
+  }
+  .laptop-container .laptop-articles {
+    text-align: left;
+  }
+  .laptop-container .laptop-articles .article {
+    padding-right: 2rem;
+  }
+  .laptop-container .laptop-articles .article .article-header {
+    font-size: 1.3rem;
+  }
+  .laptop-container .laptop-articles .article p {
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 0.7rem;
   }
   .footer {
-    padding: 4rem 0;
+    padding: 4rem 3rem;
     padding-bottom: 1rem;
     text-align: left;
   }
   .footer-container {
     align-items: start;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+  .footer-container .footer-logo {
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .header .nav {
+    padding: 4rem 8rem;
+  }
+  .header .nav-menu {
+    display: none;
+  }
+  .editor-section .editor-header {
+    font-size: 2rem;
+  }
+  .editor-section .editor-container {
+    padding: 0 4rem;
+  }
+  .editor-section .editor-container .editor-img .editor-img-desktop {
+    height: 37rem;
+    margin-right: -15rem;
+  }
+  .editor-section .editor-container .editor-articles {
+    text-align: left;
+    align-self: center;
+    padding: 4rem 0 0 2rem;
+  }
+  .editor-section .editor-container .editor-articles .article h2 {
+    font-size: 1.5rem;
+  }
+  .editor-section .editor-container .editor-articles .article p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .phone-section .phone-img {
+    transform: translate(15%, -10%);
+  }
+  .laptop-container .laptop-img .desktop {
+    height: 40rem;
+    margin-left: -14rem;
+  }
+  .laptop-container .laptop-articles .article {
+    padding-right: 7rem;
+  }
+  .laptop-container .laptop-articles .article .article-header {
+    font-size: 1.4rem;
+  }
+  .laptop-container .laptop-articles .article p {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1240px) {
+  .footer-container .footer-logo {
+    margin: 0 auto;
   }
 }
