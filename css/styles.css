@@ -26,6 +26,43 @@ html {
   font-size: 16px;
 }
 
+.footer {
+  background: hsl(240deg, 10%, 16%);
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 2rem 0rem;
+  border-radius: 0 75px 0 0;
+}
+.footer-container {
+  display: grid;
+  gap: 2rem 0;
+}
+.footer-container .footer-logo {
+  margin: 0 auto;
+  height: 2rem;
+}
+.footer-container-links p {
+  margin-bottom: 2rem;
+}
+.footer-container-links ul a {
+  margin-bottom: 0.6rem;
+  color: hsl(240deg, 2%, 79%);
+}
+.footer .attribution {
+  color: hsl(240deg, 10%, 16%);
+  margin-top: 2rem;
+  text-align: center;
+  color: hsl(207deg, 13%, 34%);
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+.footer .attribution a {
+  color: hsl(0deg, 0%, 100%);
+  padding: 0 0.2rem;
+  font-weight: bold;
+}
+
 #btn, .big-screen-nav-signup-btn, .nav-signup-btn, .header-learnmore-btn, .header-start-btn {
   padding: 0.65rem 0.95rem;
   border-radius: 25px;
@@ -88,7 +125,6 @@ html {
   width: 90%;
   top: 75%;
   left: 0;
-  transform: translate(5%, 0);
   text-align: center;
   display: grid;
   gap: 1rem;
@@ -97,6 +133,8 @@ html {
   font-family: "Overpass", sans-serif;
   font-weight: 700;
   visibility: hidden;
+  transform: translate(5%, -50%);
+  transition: transform 200ms, visibility 50ms;
 }
 .header .nav-fixed-menu .menu-container {
   border-bottom: 1px solid hsl(240deg, 2%, 79%);
@@ -114,7 +152,7 @@ html {
   justify-content: center;
   gap: 0.5rem;
 }
-.header .nav-fixed-menu .menu-container .menu-links-container div button {
+.header .nav-fixed-menu .menu-container .menu-links-container div .small-nav-btn {
   background: transparent;
   border: transparent;
   font-family: inherit;
@@ -123,7 +161,7 @@ html {
   color: hsl(240deg, 10%, 16%);
 }
 .header .nav-fixed-menu .menu-container .menu-links-container div img {
-  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 .header .nav-fixed-menu .menu-container .small-nav-links {
   padding: 1rem 0;
@@ -270,41 +308,26 @@ html {
   font-weight: 300;
 }
 
-.footer {
-  background: hsl(240deg, 10%, 16%);
-  font-family: "Ubuntu", sans-serif;
-  color: white;
-  text-align: center;
-  padding: 2rem 0rem;
-  border-radius: 0 75px 0 0;
+.nav .active {
+  visibility: visible;
+  transform: translate(5%, 0);
 }
-.footer-container {
+.nav .unshow {
+  display: none;
+}
+.nav .menu-container .menu-links-container .rotate-arrow {
+  transform: rotate(180deg);
+}
+.nav .menu-container .menu-links-container .active-nav {
   display: grid;
-  gap: 2rem 0;
 }
-.footer-container .footer-logo {
-  margin: 0 auto;
-  height: 2rem;
+.nav .big-screen-nav-links .big-screen-link .active-big-nav {
+  visibility: visible;
+  transform: translate(-25%, 10%);
 }
-.footer-container-links p {
-  margin-bottom: 2rem;
-}
-.footer-container-links ul a {
-  margin-bottom: 0.6rem;
-  color: hsl(240deg, 2%, 79%);
-}
-.footer .attribution {
-  color: hsl(240deg, 10%, 16%);
-  margin-top: 2rem;
-  text-align: center;
-  color: hsl(207deg, 13%, 34%);
-  font-size: 0.6rem;
-  font-weight: 500;
-}
-.footer .attribution a {
-  color: hsl(0deg, 0%, 100%);
-  padding: 0 0.2rem;
-  font-weight: bold;
+
+.rotate-arrow {
+  transform: rotate(180deg);
 }
 
 @media (min-width: 768px) {
@@ -341,20 +364,6 @@ html {
     border: none;
     color: hsl(0deg, 0%, 100%);
   }
-  .header .nav .big-screen-nav-links .big-screen-link ul {
-    visibility: hidden;
-    position: absolute;
-    background: hsl(0deg, 0%, 100%);
-    padding: 1.2rem 1rem;
-    width: 8rem;
-    border-radius: 10px;
-    transform: translate(-25%, 10%);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.364);
-  }
-  .header .nav .big-screen-nav-links .big-screen-link ul a {
-    font-size: 0.8rem;
-    margin: 0.3rem 0;
-  }
   .header .nav .big-screen-menu-sign {
     display: flex;
     margin-left: auto;
@@ -364,6 +373,21 @@ html {
   }
   .header .nav .big-screen-menu-sign a {
     color: hsl(0deg, 0%, 100%);
+  }
+  .header .big-nav-links {
+    visibility: hidden;
+    position: absolute;
+    background: hsl(0deg, 0%, 100%);
+    padding: 1.2rem 1rem;
+    width: 8rem;
+    border-radius: 10px;
+    transform: translate(-25%, 30%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.364);
+    transition: transform 200ms, visibility 50ms;
+  }
+  .header .big-nav-links a {
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
   }
   .header-content h1 {
     font-size: 2.7rem;
@@ -522,16 +546,4 @@ html {
   .footer-container .footer-logo {
     margin: 0 auto;
   }
-}
-.nav .active {
-  visibility: visible;
-}
-.nav .unshow {
-  display: none;
-}
-.nav .menu-container .menu-links-container .rotate-arrow {
-  transform: rotate(180deg);
-}
-.nav .menu-container .menu-links-container .active-nav {
-  display: grid;
 }

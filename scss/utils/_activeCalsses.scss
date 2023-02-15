@@ -1,0 +1,28 @@
+.nav {
+  .active {
+    visibility: visible;
+    transform: translate(5%, 0);
+  }
+  .unshow {
+    display: none;
+  }
+  .menu-container {
+    .menu-links-container {
+      .rotate-arrow {
+        transform: rotate(180deg);
+      }
+      .active-nav {
+        display: grid;
+      }
+    }
+  }
+  .big-screen-nav-links {
+    .big-screen-link .active-big-nav {
+      visibility: visible;
+      transform: translate(-25%, 10%);
+    }
+  }
+}
+.rotate-arrow {
+  transform: rotate(180deg);
+}

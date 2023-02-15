@@ -1,1 +1,42 @@
 // footer
+.footer {
+  background: $cl-Verydarkblackblue;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 2rem 0rem;
+  border-radius: 0 $radius-4 0 0;
+  &-container {
+    display: grid;
+    gap: 2rem 0;
+    .footer-logo {
+      margin: 0 auto;
+      height: 2rem;
+    }
+    &-links {
+      // margin-bottom: 1rem;
+      p {
+        margin-bottom: 2rem;
+      }
+      ul {
+        a {
+          margin-bottom: 0.6rem;
+          color: $cl-Grayishblue;
+        }
+      }
+    }
+  }
+  .attribution {
+    color: $cl-Verydarkblackblue;
+    margin-top: 2rem;
+    text-align: center;
+    color: $cl-Verydarkgrayishblue;
+    font-size: 0.6rem;
+    font-weight: 500;
+    a {
+      color: $cl-White;
+      padding: 0 0.2rem;
+      font-weight: bold;
+    }
+  }
+}
