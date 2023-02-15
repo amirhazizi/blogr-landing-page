@@ -56,8 +56,8 @@ html {
   font-family: "Overpass", sans-serif;
   font-weight: 700;
   visibility: hidden;
-  transform: translate(5%, -50%);
-  transition: transform 200ms, visibility 50ms;
+  transform: translate(5%, -125%);
+  transition: transform 200ms, visibility 0s;
 }
 .nav-fixed-menu .menu-container {
   border-bottom: 1px solid hsl(240deg, 2%, 79%);
@@ -105,6 +105,11 @@ html {
   font-weight: 700;
   font-size: 1rem;
   color: hsl(240deg, 10%, 16%);
+  transition: all 250ms linear;
+}
+.small-nav-btn:hover {
+  text-decoration: underline;
+  color: hsl(207deg, 13%, 34%);
 }
 
 .header {
@@ -155,6 +160,11 @@ html {
 .footer-container-links ul a {
   margin-bottom: 0.6rem;
   color: hsl(240deg, 2%, 79%);
+  transition: all 250ms linear;
+}
+.footer-container-links ul a:hover {
+  text-decoration: underline;
+  color: hsl(207deg, 13%, 34%);
 }
 .footer .attribution {
   color: hsl(240deg, 10%, 16%);
@@ -175,6 +185,7 @@ html {
   border-radius: 25px;
   border: 1px solid white;
   font-weight: bold;
+  transition: all 250ms linear;
   font-family: "Ubuntu", sans-serif;
   margin: 0 0.3rem;
 }
@@ -183,12 +194,21 @@ html {
   background: hsl(0deg, 0%, 100%);
   color: hsl(356deg, 100%, 66%);
 }
+.header-start-btn:hover {
+  color: white;
+  background: #ff858d;
+  border-color: #ff858d;
+}
 
 .header-learnmore-btn {
   background: transparent;
   color: hsl(0deg, 0%, 100%);
   padding-left: 1.3rem;
   padding-right: 1.3rem;
+}
+.header-learnmore-btn:hover {
+  color: #ff858d;
+  background: hsl(0deg, 0%, 100%);
 }
 
 .nav-signup-btn {
@@ -202,6 +222,11 @@ html {
   color: hsl(356deg, 100%, 66%);
   font-weight: 900;
   padding: 0.7rem 1.8rem;
+}
+.big-screen-nav-signup-btn:hover {
+  color: white;
+  background: #ff858d;
+  border-color: #ff858d;
 }
 
 #section, .laptop-section, .editor-section {
@@ -369,6 +394,11 @@ html {
     background: transparent;
     border: none;
     color: hsl(0deg, 0%, 100%);
+    transition: all 250ms linear;
+  }
+  .header .nav .big-screen-nav-links .big-screen-link div button:hover {
+    text-decoration: underline;
+    color: hsl(240deg, 2%, 79%);
   }
   .header .nav .big-screen-menu-sign {
     display: flex;
@@ -379,6 +409,7 @@ html {
   }
   .header .nav .big-screen-menu-sign a {
     color: hsl(0deg, 0%, 100%);
+    transition: all 250ms linear;
   }
   .header .big-nav-links {
     visibility: hidden;
@@ -392,8 +423,15 @@ html {
     transition: transform 200ms, visibility 50ms;
   }
   .header .big-nav-links a {
+    font-family: "Ubuntu", sans-serif;
     font-size: 0.8rem;
     margin: 0.3rem 0;
+    transition: all 250ms linear;
+    font-weight: 300;
+  }
+  .header .big-nav-links a:hover {
+    color: hsl(240deg, 10%, 16%);
+    font-weight: 900;
   }
   .header-content h1 {
     font-size: 2.7rem;

@@ -1,9 +1,12 @@
+import get from "./utils/_getElement.js"
+import gets from "./utils/_getElements.js"
+import navMenu from "./showNavs.js"
 // variables
-const navMenuBtn = document.querySelector(".nav-menu")
-const navCloseBtn = document.querySelector(".nav-close")
-const smallMenu = document.querySelector(".nav-fixed-menu")
-const smallMenuBtns = document.querySelectorAll(".small-nav-btn")
-const bignavBtns = document.querySelectorAll(".big-nav-btn")
+const navMenuBtn = get(".nav-menu")
+const navCloseBtn = get(".nav-close")
+const smallMenu = get(".nav-fixed-menu")
+const smallMenuBtns = gets(".small-nav-btn")
+const bignavBtns = gets(".big-nav-btn")
 
 // active and deactive nav menus
 navMenu(smallMenuBtns, "active-nav")
@@ -20,27 +23,3 @@ navCloseBtn.addEventListener("click", () => {
   navMenuBtn.classList.remove("unshow")
   navCloseBtn.classList.add("unshow")
 })
-
-// show option btn menus function
-function navMenu(selection, action) {
-  selection.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const menu = btn.parentElement.nextElementSibling
-      const arrowImg = btn.nextElementSibling
-      menu.classList.toggle(action)
-      arrowImg.classList.toggle("rotate-arrow")
-      btn.classList.toggle("actived-btn")
-      selection.forEach((b) => {
-        if (b !== btn) {
-          b.parentElement.nextElementSibling.classList.remove(action)
-          b.nextElementSibling.classList.remove("rotate-arrow")
-        }
-      })
-      // timeout for unshow menu
-      setTimeout(() => {
-        menu.classList.remove(action)
-        arrowImg.classList.remove("rotate-arrow")
-      }, 2500)
-    })
-  })
-}

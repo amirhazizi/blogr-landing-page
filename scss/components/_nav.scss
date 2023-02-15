@@ -28,8 +28,8 @@
     font-family: "Overpass", sans-serif;
     font-weight: 700;
     visibility: hidden;
-    transform: translate(5%, -50%);
-    transition: transform 200ms, visibility 50ms;
+    transform: translate(5%, -125%);
+    transition: transform 200ms, visibility 0s;
     .menu-container {
       border-bottom: 1px solid $cl-Grayishblue;
       padding-bottom: 1rem;
@@ -78,4 +78,9 @@
   font-weight: 700;
   font-size: 1rem;
   color: $cl-Verydarkblackblue;
+  transition: $transition;
+  &:hover {
+    text-decoration: underline;
+    color: $cl-Verydarkgrayishblue;
+  }
 }
