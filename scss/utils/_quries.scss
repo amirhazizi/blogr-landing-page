@@ -16,7 +16,7 @@
       .big-screen-nav-links {
         display: flex;
         gap: 1rem;
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 2.5rem;
         border-radius: $radius-1;
         font-family: "Overpass", sans-serif;
         font-weight: 700;
@@ -31,6 +31,7 @@
               border: none;
               color: $cl-White;
               transition: $transition;
+              font-weight: 700;
               &:hover {
                 text-decoration: underline;
                 color: $cl-Grayishblue;
@@ -65,10 +66,10 @@
         font-family: "Ubuntu", sans-serif;
         font-size: 0.8rem;
         margin: 0.3rem 0;
-        transition: $transition;
+        transition: font-weight 250ms liner;
         font-weight: 300;
+        color: $cl-Verydarkblackblue;
         &:hover {
-          color: $cl-Verydarkblackblue;
           font-weight: 900;
         }
       }

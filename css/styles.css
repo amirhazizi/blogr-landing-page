@@ -131,7 +131,7 @@ html {
   font-weight: 600;
 }
 .header-content p {
-  color: hsl(240deg, 2%, 79%);
+  color: #e2e2e4;
   font-size: 1.1rem;
 }
 .header-content .header-buttons {
@@ -379,7 +379,7 @@ html {
   .header .nav .big-screen-nav-links {
     display: flex;
     gap: 1rem;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2.5rem;
     border-radius: 5px;
     font-family: "Overpass", sans-serif;
     font-weight: 700;
@@ -395,6 +395,7 @@ html {
     border: none;
     color: hsl(0deg, 0%, 100%);
     transition: all 250ms linear;
+    font-weight: 700;
   }
   .header .nav .big-screen-nav-links .big-screen-link div button:hover {
     text-decoration: underline;
@@ -426,11 +427,11 @@ html {
     font-family: "Ubuntu", sans-serif;
     font-size: 0.8rem;
     margin: 0.3rem 0;
-    transition: all 250ms linear;
+    transition: font-weight 250ms liner;
     font-weight: 300;
+    color: hsl(240deg, 10%, 16%);
   }
   .header .big-nav-links a:hover {
-    color: hsl(240deg, 10%, 16%);
     font-weight: 900;
   }
   .header-content h1 {

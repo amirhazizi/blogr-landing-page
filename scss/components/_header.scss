@@ -17,7 +17,7 @@
       font-weight: 600;
     }
     p {
-      color: $cl-Grayishblue;
+      color: lighten($cl-Grayishblue, 10);
       font-size: 1.1rem;
     }
     .header-buttons {
