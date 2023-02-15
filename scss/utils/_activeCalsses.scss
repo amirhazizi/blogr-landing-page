@@ -17,7 +17,7 @@
     }
   }
   .big-screen-nav-links {
-    .big-screen-link .active-big-nav {
+    .active-big-nav {
       visibility: visible;
       transform: translate(-25%, 10%);
     }
@@ -25,4 +25,7 @@
 }
 .rotate-arrow {
   transform: rotate(180deg);
+}
+.actived-btn {
+  color: $cl-Verydarkgrayishblue;
 }

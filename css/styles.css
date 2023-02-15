@@ -152,14 +152,6 @@ html {
   justify-content: center;
   gap: 0.5rem;
 }
-.header .nav-fixed-menu .menu-container .menu-links-container div .small-nav-btn {
-  background: transparent;
-  border: transparent;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 1rem;
-  color: hsl(240deg, 10%, 16%);
-}
 .header .nav-fixed-menu .menu-container .menu-links-container div img {
   margin-bottom: 0.2rem;
 }
@@ -200,6 +192,15 @@ html {
 }
 .header-content .header-buttons {
   margin-top: 1.5rem;
+}
+
+.small-nav-btn {
+  background: transparent;
+  border: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  color: hsl(240deg, 10%, 16%);
 }
 
 #section, .laptop-section, .editor-section {
@@ -321,13 +322,17 @@ html {
 .nav .menu-container .menu-links-container .active-nav {
   display: grid;
 }
-.nav .big-screen-nav-links .big-screen-link .active-big-nav {
+.nav .big-screen-nav-links .active-big-nav {
   visibility: visible;
   transform: translate(-25%, 10%);
 }
 
 .rotate-arrow {
   transform: rotate(180deg);
+}
+
+.actived-btn {
+  color: hsl(207deg, 13%, 34%);
 }
 
 @media (min-width: 768px) {

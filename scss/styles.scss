@@ -54,14 +54,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            .small-nav-btn {
-              background: transparent;
-              border: transparent;
-              font-family: inherit;
-              font-weight: 700;
-              font-size: 1rem;
-              color: $cl-Verydarkblackblue;
-            }
+
             img {
               margin-bottom: 0.2rem;
             }
@@ -108,6 +101,14 @@
       margin-top: 1.5rem;
     }
   }
+}
+.small-nav-btn {
+  background: transparent;
+  border: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  color: $cl-Verydarkblackblue;
 }
 #section {
   padding: 5rem 0;
