@@ -104,6 +104,7 @@
       display: none;
     }
     .laptop-articles {
+      display: grid;
       padding: 0 2rem;
       color: $cl-Verydarkblue;
       .article-header {

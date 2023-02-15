@@ -3,6 +3,7 @@
     background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%)),
       url("../images/bg-pattern-intro-mobile.svg") top 50% left 30%/250%
         no-repeat;
+    height: 38rem;
     .nav {
       padding: 2rem 4rem;
       justify-content: start;
@@ -29,7 +30,7 @@
             button {
               background: transparent;
               border: none;
-              color: $cl-White;
+              color: lighten($cl-Grayishblue, 5);
               transition: $transition;
               font-weight: 700;
               &:hover {
@@ -75,6 +76,7 @@
       }
     }
     &-content {
+      margin-top: 3rem;
       h1 {
         font-size: 2.7rem;
       }
@@ -121,7 +123,7 @@
 
   .phone-section {
     background-size: 90%;
-    background-position: bottom 15% left -200%;
+    background-position: bottom 15% left -220%;
     .phone-img {
       left: 0;
       top: 0;
@@ -192,9 +194,17 @@
 @media (min-width: 1024px) {
   .header {
     .nav {
-      padding: 4rem 8rem;
+      padding: 4rem 10rem;
       &-menu {
         display: none;
+      }
+    }
+    &-content {
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1.5rem;
       }
     }
   }
@@ -203,11 +213,11 @@
       font-size: 2rem;
     }
     .editor-container {
-      padding: 0 4rem;
+      padding: 0 5rem;
       .editor-img {
         .editor-img-desktop {
-          height: 37rem;
-          margin-right: -15rem;
+          height: 47rem;
+          margin-right: -18rem;
         }
       }
       .editor-articles {
@@ -229,24 +239,34 @@
 
   .phone-section {
     .phone-img {
-      transform: translate(15%, -10%);
+      transform: translate(25%, -10%);
+    }
+    .phone-article {
+      padding: 6rem 9rem;
+      h1 {
+        font-size: 2.3rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
     }
   }
   .laptop-container {
     .laptop-img {
       .desktop {
-        height: 40rem;
-        margin-left: -14rem;
+        height: 50rem;
+        margin-left: -17.5rem;
       }
     }
     .laptop-articles {
+      gap: 2rem;
       .article {
         padding-right: 7rem;
         .article-header {
-          font-size: 1.5rem;
+          font-size: 2rem;
         }
         p {
-          font-size: 0.9rem;
+          font-size: 1.1rem;
         }
       }
     }

@@ -319,6 +319,7 @@ html {
   display: none;
 }
 .laptop-section .laptop-container .laptop-articles {
+  display: grid;
   padding: 0 2rem;
   color: hsl(208deg, 49%, 24%);
 }
@@ -364,6 +365,7 @@ html {
 @media (min-width: 768px) {
   .header {
     background: linear-gradient(90deg, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%)), url("../images/bg-pattern-intro-mobile.svg") top 50% left 30%/250% no-repeat;
+    height: 38rem;
   }
   .header .nav {
     padding: 2rem 4rem;
@@ -393,7 +395,7 @@ html {
   .header .nav .big-screen-nav-links .big-screen-link div button {
     background: transparent;
     border: none;
-    color: hsl(0deg, 0%, 100%);
+    color: #d5d5d7;
     transition: all 250ms linear;
     font-weight: 700;
   }
@@ -433,6 +435,9 @@ html {
   }
   .header .big-nav-links a:hover {
     font-weight: 900;
+  }
+  .header-content {
+    margin-top: 3rem;
   }
   .header-content h1 {
     font-size: 2.7rem;
@@ -475,7 +480,7 @@ html {
   }
   .phone-section {
     background-size: 90%;
-    background-position: bottom 15% left -200%;
+    background-position: bottom 15% left -220%;
   }
   .phone-section .phone-img {
     left: 0;
@@ -543,20 +548,26 @@ html {
 }
 @media (min-width: 1024px) {
   .header .nav {
-    padding: 4rem 8rem;
+    padding: 4rem 10rem;
   }
   .header .nav-menu {
     display: none;
+  }
+  .header-content h1 {
+    font-size: 3.5rem;
+  }
+  .header-content p {
+    font-size: 1.5rem;
   }
   .editor-section .editor-header {
     font-size: 2rem;
   }
   .editor-section .editor-container {
-    padding: 0 4rem;
+    padding: 0 5rem;
   }
   .editor-section .editor-container .editor-img .editor-img-desktop {
-    height: 37rem;
-    margin-right: -15rem;
+    height: 47rem;
+    margin-right: -18rem;
   }
   .editor-section .editor-container .editor-articles {
     text-align: left;
@@ -571,20 +582,32 @@ html {
     line-height: 1.5;
   }
   .phone-section .phone-img {
-    transform: translate(15%, -10%);
+    transform: translate(25%, -10%);
+  }
+  .phone-section .phone-article {
+    padding: 6rem 9rem;
+  }
+  .phone-section .phone-article h1 {
+    font-size: 2.3rem;
+  }
+  .phone-section .phone-article p {
+    font-size: 1.1rem;
   }
   .laptop-container .laptop-img .desktop {
-    height: 40rem;
-    margin-left: -14rem;
+    height: 50rem;
+    margin-left: -17.5rem;
+  }
+  .laptop-container .laptop-articles {
+    gap: 2rem;
   }
   .laptop-container .laptop-articles .article {
     padding-right: 7rem;
   }
   .laptop-container .laptop-articles .article .article-header {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .laptop-container .laptop-articles .article p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 1240px) {
