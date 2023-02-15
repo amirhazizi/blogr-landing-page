@@ -1,119 +1,20 @@
 // config
 @import "./utils/config";
+// navbar
+@import "./components/nav";
+// header
+@import "./components/header";
 // footer
 @import "./components/footer";
 // btns
 @import "./components/btns";
-.header {
-  background: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%)),
-    url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
-  background-blend-mode: saturation;
-  height: 35rem;
-  border-radius: 0 0 0 $radius-4;
-  .nav {
-    padding: 4rem 1.5rem;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &-logo {
-      height: 2rem;
-    }
-    .big-screen-nav-links {
-      display: none;
-    }
-    .big-screen-menu-sign {
-      display: none;
-    }
-    &-fixed-menu {
-      position: absolute;
-      background: $cl-White;
-      width: 90%;
-      top: 75%;
-      left: 0;
-      text-align: center;
-      display: grid;
-      gap: 1rem;
-      padding: 1.5rem 1rem;
-      border-radius: $radius-1;
-      font-family: "Overpass", sans-serif;
-      font-weight: 700;
-      visibility: hidden;
-      transform: translate(5%, -50%);
-      transition: transform 200ms, visibility 50ms;
-      .menu-container {
-        border-bottom: 1px solid $cl-Grayishblue;
-        padding-bottom: 1rem;
-        display: grid;
-        gap: 1rem;
-        .menu-links-container {
-          display: grid;
-          gap: 1rem;
-          div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
 
-            img {
-              margin-bottom: 0.2rem;
-            }
-          }
-        }
-        .small-nav-links {
-          padding: 1rem 0;
-          display: none;
-          gap: 0.8rem;
-          opacity: 0.9;
-          background: lighten($cl-Grayishblue, 10);
-          border-radius: $radius-2;
-          a {
-            color: $cl-Verydarkblackblue;
-          }
-        }
-      }
-      .menu-sign {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        a {
-          color: $cl-Verydarkblackblue;
-        }
-      }
-    }
-  }
-  &-content {
-    color: $cl-White;
-    font-family: "Overpass", sans-serif;
-    text-align: center;
-    padding: 0 2.25rem;
-    margin-top: 1.5rem;
-    display: grid;
-    gap: 1rem;
-    h1 {
-      font-weight: 600;
-    }
-    p {
-      color: $cl-Grayishblue;
-      font-size: 1.1rem;
-    }
-    .header-buttons {
-      margin-top: 1.5rem;
-    }
-  }
-}
-.small-nav-btn {
-  background: transparent;
-  border: transparent;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 1rem;
-  color: $cl-Verydarkblackblue;
-}
+// global
 #section {
   padding: 5rem 0;
   text-align: center;
 }
+// editor section
 .editor-section {
   @extend #section;
   font-family: "Overpass", sans-serif;
@@ -151,6 +52,7 @@
     }
   }
 }
+// phone section
 .phone-section {
   position: relative;
   background: linear-gradient(hsl(237, 18%, 21%), hsl(237, 23%, 32%)),
@@ -183,7 +85,7 @@
     }
   }
 }
-
+// laptop section
 .laptop-section {
   @extend #section;
   padding: 4rem 0;

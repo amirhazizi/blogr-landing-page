@@ -26,6 +26,113 @@ html {
   font-size: 16px;
 }
 
+.nav {
+  padding: 4rem 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  height: 2rem;
+}
+.nav .big-screen-nav-links {
+  display: none;
+}
+.nav .big-screen-menu-sign {
+  display: none;
+}
+.nav-fixed-menu {
+  position: absolute;
+  background: hsl(0deg, 0%, 100%);
+  width: 90%;
+  top: 75%;
+  left: 0;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  visibility: hidden;
+  transform: translate(5%, -50%);
+  transition: transform 200ms, visibility 50ms;
+}
+.nav-fixed-menu .menu-container {
+  border-bottom: 1px solid hsl(240deg, 2%, 79%);
+  padding-bottom: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.nav-fixed-menu .menu-container .menu-links-container {
+  display: grid;
+  gap: 1rem;
+}
+.nav-fixed-menu .menu-container .menu-links-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.nav-fixed-menu .menu-container .menu-links-container div img {
+  margin-bottom: 0.2rem;
+}
+.nav-fixed-menu .menu-container .small-nav-links {
+  padding: 1rem 0;
+  display: none;
+  gap: 0.8rem;
+  opacity: 0.9;
+  background: #e2e2e4;
+  border-radius: 10px;
+}
+.nav-fixed-menu .menu-container .small-nav-links a {
+  color: hsl(240deg, 10%, 16%);
+}
+.nav-fixed-menu .menu-sign {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.nav-fixed-menu .menu-sign a {
+  color: hsl(240deg, 10%, 16%);
+}
+
+.small-nav-btn {
+  background: transparent;
+  border: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  color: hsl(240deg, 10%, 16%);
+}
+
+.header {
+  background: linear-gradient(hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%)), url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
+  background-blend-mode: saturation;
+  height: 35rem;
+  border-radius: 0 0 0 75px;
+}
+.header-content {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  padding: 0 2.25rem;
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.header-content h1 {
+  font-weight: 600;
+}
+.header-content p {
+  color: hsl(240deg, 2%, 79%);
+  font-size: 1.1rem;
+}
+.header-content .header-buttons {
+  margin-top: 1.5rem;
+}
+
 .footer {
   background: hsl(240deg, 10%, 16%);
   font-family: "Ubuntu", sans-serif;
@@ -95,112 +202,6 @@ html {
   color: hsl(356deg, 100%, 66%);
   font-weight: 900;
   padding: 0.7rem 1.8rem;
-}
-
-.header {
-  background: linear-gradient(hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%)), url("../images/bg-pattern-intro-mobile.svg") 36% 34%/350% no-repeat;
-  background-blend-mode: saturation;
-  height: 35rem;
-  border-radius: 0 0 0 75px;
-}
-.header .nav {
-  padding: 4rem 1.5rem;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header .nav-logo {
-  height: 2rem;
-}
-.header .nav .big-screen-nav-links {
-  display: none;
-}
-.header .nav .big-screen-menu-sign {
-  display: none;
-}
-.header .nav-fixed-menu {
-  position: absolute;
-  background: hsl(0deg, 0%, 100%);
-  width: 90%;
-  top: 75%;
-  left: 0;
-  text-align: center;
-  display: grid;
-  gap: 1rem;
-  padding: 1.5rem 1rem;
-  border-radius: 5px;
-  font-family: "Overpass", sans-serif;
-  font-weight: 700;
-  visibility: hidden;
-  transform: translate(5%, -50%);
-  transition: transform 200ms, visibility 50ms;
-}
-.header .nav-fixed-menu .menu-container {
-  border-bottom: 1px solid hsl(240deg, 2%, 79%);
-  padding-bottom: 1rem;
-  display: grid;
-  gap: 1rem;
-}
-.header .nav-fixed-menu .menu-container .menu-links-container {
-  display: grid;
-  gap: 1rem;
-}
-.header .nav-fixed-menu .menu-container .menu-links-container div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.header .nav-fixed-menu .menu-container .menu-links-container div img {
-  margin-bottom: 0.2rem;
-}
-.header .nav-fixed-menu .menu-container .small-nav-links {
-  padding: 1rem 0;
-  display: none;
-  gap: 0.8rem;
-  opacity: 0.9;
-  background: #e2e2e4;
-  border-radius: 10px;
-}
-.header .nav-fixed-menu .menu-container .small-nav-links a {
-  color: hsl(240deg, 10%, 16%);
-}
-.header .nav-fixed-menu .menu-sign {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.header .nav-fixed-menu .menu-sign a {
-  color: hsl(240deg, 10%, 16%);
-}
-.header-content {
-  color: hsl(0deg, 0%, 100%);
-  font-family: "Overpass", sans-serif;
-  text-align: center;
-  padding: 0 2.25rem;
-  margin-top: 1.5rem;
-  display: grid;
-  gap: 1rem;
-}
-.header-content h1 {
-  font-weight: 600;
-}
-.header-content p {
-  color: hsl(240deg, 2%, 79%);
-  font-size: 1.1rem;
-}
-.header-content .header-buttons {
-  margin-top: 1.5rem;
-}
-
-.small-nav-btn {
-  background: transparent;
-  border: transparent;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 1rem;
-  color: hsl(240deg, 10%, 16%);
 }
 
 #section, .laptop-section, .editor-section {
@@ -541,10 +542,10 @@ html {
     padding-right: 7rem;
   }
   .laptop-container .laptop-articles .article .article-header {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   .laptop-container .laptop-articles .article p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1240px) {
